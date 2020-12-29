@@ -6,9 +6,7 @@
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
-# 配置aws cli2 ，
-# 选择国内区域来部署cdk stack，配置国内IAM admin user的Access Key ID 和 Secret Access Key
-# Region选择需同步的S3 bucket region，比如cn-north-1
+### 配置aws cli2,选择国内区域来部署cdk stack，配置国内IAM admin user的Access Key ID 和 Secret Access Key Region选择需同步的S3 bucket region，比如cn-north-1
 aws configure 
 AWS Access Key ID [None]: AKIATDxxxxxxxx
 AWS Secret Access Key [None]:  N6Q6wxxxxxxxxxxxxxxx
@@ -21,7 +19,6 @@ Default output format [None]: json`
 sudo yum install python3 -y
 curl --silent --location https://rpm.nodesource.com/setup_14.x | sudo bash -
 sudo yum install -y nodejs
-# 查看nodejs版本
 node -e "console.log('Running Node.js ' + process.version)"
 sudo npm install -g aws-cdk
 cdk --version`
@@ -32,10 +29,9 @@ cdk --version`
 git clone https://github.com/aws-samples/amazon-s3-resumable-upload.git
 cd ./amazon-s3-resumable-upload/serverless/cdk-serverless
 sudo python3 -m pip install -r requirements.txt
-# 查看已有的cdk stack
 cdk ls
 s3-migrate-serverless
-# 修改此stack的配置。
+### 修改此stack的配置。
 vi app.py
 `
 `# 修改以下部分,src_bucket是国内的源bucket，des_bucket是global的目标bucket
