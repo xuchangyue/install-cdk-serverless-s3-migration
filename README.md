@@ -1,4 +1,3 @@
-# 星坛 Serverless cdk 同步国内S3到新加坡S3
 
 1. 安装并配置AWS CLI2，可在笔记本或ec2中安装环境，这里新起一台amazon linux 2来安装，保证环境是干净的，Mac/Windows安装参考文档https://docs.aws.amazon.com/zh_cn/cli/latest/userguide/install-cliv2.html
 
